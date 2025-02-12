@@ -1,4 +1,4 @@
-# On Single-Head Discrete Attention
+# On Direct Discrete Attention
 
 
 ## Usage
@@ -12,13 +12,13 @@ sh prepare_for_use.sh
 To run an experiment, we can use the following command
 
 ```
-python train_model_sda.py
+python train_model_dda.py
 ```
 
 You'll need to modify train_model.py to define your model for the experiment. To get training perplexity we can use:
 
 ```
-python eval_model_sda.py
+python eval_model_dda.py
 ```
 
 
