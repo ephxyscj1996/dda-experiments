@@ -53,7 +53,7 @@ class Rope_DDA(torch.nn.Module):
         cos = self.cos_cached[:, :, past_length:past_length+S, :self.dh//2].repeat(1, 1, 1, 2)
         sin = self.sin_cached[:, :, past_length:past_length+S, :self.dh//2].repeat(1, 1, 1, 2)
         q_heads, k_heads = apply_rope(q_heads, k_heads, cos, sin)
-        _, k1_heads = apply_rope(q_heads, k_heads, cos, sin)
+        _, k1_heads = apply_rope(q_heads, k1_heads, cos, sin)
 
         if kv_cache is not None:
             k_cache, v_cache = kv_cache
